@@ -4,19 +4,9 @@
 -- =====================================================
 
 -- 0. TẠO DATABASE VÀ CHUYỂN VÀO ĐÓ LÀM VIỆC
--- --- MySQL / MariaDB ---
+-- MySQL 8.x
 CREATE DATABASE IF NOT EXISTS grocery_sales_db;
 USE grocery_sales_db;
-
--- --- PostgreSQL (chạy riêng, không có "IF NOT EXISTS" khi tạo từ psql) ---
--- CREATE DATABASE grocery_sales_db;
--- (sau đó kết nối lại vào DB này rồi mới chạy các lệnh CREATE TABLE bên dưới)
-
--- --- SQL Server ---
--- CREATE DATABASE grocery_sales_db;
--- GO
--- USE grocery_sales_db;
--- GO
 
 -- 1. COUNTRIES (không phụ thuộc bảng nào)
 CREATE TABLE countries (

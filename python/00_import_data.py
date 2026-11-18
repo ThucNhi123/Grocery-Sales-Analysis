@@ -1,41 +1,50 @@
 """
-Import dữ liệu Grocery Sales (7 file CSV) vào database.
-Yêu cầu: đã chạy 00_create_schema.sql trước để tạo sẵn bảng + FK constraints.
+Import the 7 Grocery Sales CSV files into MySQL.
+Run SQL/00_create_schema.sql first (it creates the tables and foreign keys).
 
-Cài đặt thư viện cần thiết:
-    pip install pandas sqlalchemy pymysql          # nếu dùng MySQL
-    pip install pandas sqlalchemy psycopg2-binary   # nếu dùng PostgreSQL
-    pip install pandas sqlalchemy pyodbc            # nếu dùng SQL Server
+Usage (from the project root):
+    python python/00_import_data.py            # import into empty tables
+    python python/00_import_data.py --reset    # empty all tables first, then import
+
+Connection settings are read from python/.env (see python/.env.example).
 """
 
+import argparse
 import os
+import sys
+import time
+from pathlib import Path
 from urllib.parse import quote_plus
+
 import pandas as pd
 from dotenv import load_dotenv
-from sqlalchemy import create_engine
-import time
+from sqlalchemy import create_engine, text
 
 # =====================================================
-# 1. CẤU HÌNH KẾT NỐI - chỉnh lại theo DBMS bạn dùng
+# 1. CẤU HÌNH KẾT NỐI (đọc từ python/.env)
 # =====================================================
-
-# --- MySQL ---
-load_dotenv()
+ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = ROOT / "data" / "raw"          # thư mục chứa 7 file CSV gốc
+load_dotenv(ROOT / "python" / ".env")
 
 DB_USER = os.getenv("DB_USER") or "root"
-DB_PASSWORD = quote_plus(os.getenv("DB_PASSWORD") or "")
+DB_PASSWORD = quote_plus(os.getenv("DB_PASSWORD") or "")   # quote_plus: mật khẩu có ký tự đặc biệt như '@'
 DB_HOST = os.getenv("DB_HOST") or "localhost"
 DB_PORT = os.getenv("DB_PORT") or "3306"
-DB_NAME = os.getenv("DB_NAME") or "grocery_sales"
+DB_NAME = os.getenv("DB_NAME") or "grocery_sales_db"
 
-# Tạo engine an toàn
-connection_string = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-engine = create_engine(connection_string)
+engine = create_engine(f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
 
-print("Kết nối database thành công bằng biến môi trường!")
 
-# Thư mục chứa 7 file CSV gốc
-DATA_DIR = "./data/raw"
+def check_connection():
+    """Kết nối thật sự tới MySQL; dừng ngay với thông báo rõ ràng nếu thất bại."""
+    try:
+        with engine.connect() as conn:
+            conn.execute(text("SELECT 1"))
+    except Exception as e:
+        sys.exit(f"Cannot connect to MySQL ({DB_HOST}:{DB_PORT}/{DB_NAME}): {e}")
+    print(f"Connected to {DB_NAME} on {DB_HOST}:{DB_PORT}")
+
 
 # =====================================================
 # 2. THỨ TỰ IMPORT - PHẢI đúng thứ tự này vì có FK constraint
@@ -67,7 +76,7 @@ CHUNK_SIZE = 50_000
 
 
 def import_table(table_name: str, file_name: str):
-    file_path = f"{DATA_DIR}/{file_name}"
+    file_path = DATA_DIR / file_name
     print(f"\n--- Đang import '{table_name}' từ {file_path} ---")
     start = time.time()
 
@@ -103,6 +112,14 @@ def clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def reset_tables():
+    """Xoá dữ liệu mọi bảng (bảng con trước, bảng cha sau) để có thể import lại."""
+    with engine.begin() as conn:
+        for table in reversed(IMPORT_ORDER):
+            conn.execute(text(f"DELETE FROM {table}"))
+    print("All tables emptied.")
+
+
 def validate_import():
     """Check nhanh sau khi import: đếm số dòng mỗi bảng."""
     print("\n=== KIỂM TRA SAU IMPORT ===")
@@ -114,11 +131,18 @@ def validate_import():
 
 
 if __name__ == "__main__":
-    print("BẮT ĐẦU IMPORT DỮ LIỆU GROCERY SALES")
+    ap = argparse.ArgumentParser(description="Import the Grocery Sales CSV files into MySQL.")
+    ap.add_argument("--reset", action="store_true", help="empty all tables before importing")
+    args = ap.parse_args()
+
+    print("IMPORTING GROCERY SALES DATA")
     print("=" * 50)
+    check_connection()
+    if args.reset:
+        reset_tables()
 
     for table in IMPORT_ORDER:
         import_table(table, FILE_MAP[table])
 
     validate_import()
-    print("\n✅ Import hoàn tất!")
+    print("\nImport finished.")

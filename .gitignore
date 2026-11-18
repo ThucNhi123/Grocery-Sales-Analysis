@@ -25,3 +25,7 @@ dashboard/BUILD_GUIDE_vi.md
 # Tableau local files (publish to Tableau Public instead)
 *.twbx.bak
 _backup_before_fixes/
+
+# Tableau autosave / recovery files
+*.twbr
+.~*

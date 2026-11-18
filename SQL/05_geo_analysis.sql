@@ -197,6 +197,29 @@ ORDER BY VolumeTier;
 -- NHIỆM VỤ 5.3 - BỘ CHỈ SỐ THẨM ĐỊNH CHIẾN LƯỢC THỊ TRƯỜNG THEO VÙNG
 -- ---------------------------------------------------------------------
 
+/* Bảng trung gian: nhóm chiến lược của từng thành phố, tính MỘT lần và dùng lại
+   cho (a) và (b) để hai bảng luôn khớp nhau. CityID dùng để phá hoà cho NTILE. */
+-- @exec
+DROP TABLE IF EXISTS city_strategy;
+
+-- @exec
+CREATE TABLE city_strategy AS
+WITH q AS (
+    SELECT c.*,
+           NTILE(4) OVER (ORDER BY NetRevenue, CityID)                        AS SizeQ,    -- 4 = lớn nhất
+           NTILE(4) OVER (ORDER BY DailyRev_MarApr / DailyRev_JanFeb, CityID) AS GrowthQ   -- 4 = tăng nhanh nhất
+    FROM city_metrics c
+)
+SELECT q.*,
+       CASE
+           WHEN SizeQ = 4 AND GrowthQ >= 3 THEN 'Star - Invest to expand'
+           WHEN SizeQ = 4                  THEN 'Cash Cow - Maintain & optimize'
+           WHEN SizeQ <= 3 AND GrowthQ = 4 THEN 'Rising - Accelerate growth'
+           WHEN SizeQ = 1 AND GrowthQ <= 2 THEN 'Watchlist - Re-evaluate'
+           ELSE 'Core - Stable'
+       END AS StrategicGroup
+FROM q;
+
 /* (a) Scorecard từng thị trường (thành phố) + nhóm chiến lược
        Quy mô (Revenue quartile) x Động lượng (Growth quartile) */
 -- @query: t5_3_market_scorecard
@@ -207,10 +230,8 @@ WITH s AS (
            NetRevenue / NumTransactions                     AS AOV,
            (GrossRevenue - NetRevenue) * 100 / GrossRevenue AS EffDiscountPct,
            (DailyRev_MarApr / DailyRev_JanFeb - 1) * 100    AS GrowthPct,
-           ActiveCustomers * 100.0 / RegisteredCustomers    AS ActivationRatePct,
-           NTILE(4) OVER (ORDER BY NetRevenue)              AS SizeQ,     -- 4 = lớn nhất
-           NTILE(4) OVER (ORDER BY (DailyRev_MarApr / DailyRev_JanFeb)) AS GrowthQ  -- 4 = tăng nhanh nhất
-    FROM city_metrics c
+           ActiveCustomers * 100.0 / RegisteredCustomers    AS ActivationRatePct
+    FROM city_strategy c
 )
 SELECT
     RANK() OVER (ORDER BY NetRevenue DESC)          AS RevenueRank,
@@ -226,35 +247,12 @@ SELECT
     ROUND(GrowthPct, 2)                             AS GrowthPct_MarApr_vs_JanFeb,
     EmployeesBased,
     SizeQ, GrowthQ,
-    CASE
-        WHEN SizeQ = 4 AND GrowthQ >= 3 THEN 'Star - Invest to expand'
-        WHEN SizeQ = 4                  THEN 'Cash Cow - Maintain & optimize'
-        WHEN SizeQ <= 3 AND GrowthQ = 4 THEN 'Rising - Accelerate growth'
-        WHEN SizeQ = 1 AND GrowthQ <= 2 THEN 'Watchlist - Re-evaluate'
-        ELSE 'Core - Stable'
-    END                                             AS StrategicGroup
+    StrategicGroup
 FROM s
 ORDER BY RevenueRank;
 
 /* (b) Tổng hợp theo nhóm chiến lược */
 -- @query: t5_3_strategic_group_summary
-WITH s AS (
-    SELECT c.*,
-           NTILE(4) OVER (ORDER BY NetRevenue) AS SizeQ,
-           NTILE(4) OVER (ORDER BY (DailyRev_MarApr / DailyRev_JanFeb)) AS GrowthQ
-    FROM city_metrics c
-),
-g AS (
-    SELECT s.*,
-        CASE
-            WHEN SizeQ = 4 AND GrowthQ >= 3 THEN 'Star - Invest to expand'
-            WHEN SizeQ = 4                  THEN 'Cash Cow - Maintain & optimize'
-            WHEN SizeQ <= 3 AND GrowthQ = 4 THEN 'Rising - Accelerate growth'
-            WHEN SizeQ = 1 AND GrowthQ <= 2 THEN 'Watchlist - Re-evaluate'
-            ELSE 'Core - Stable'
-        END AS StrategicGroup
-    FROM s
-)
 SELECT
     StrategicGroup,
     COUNT(*)                                                         AS NumCities,
@@ -264,7 +262,7 @@ SELECT
     ROUND(SUM(NetRevenue) / SUM(ActiveCustomers), 2)                 AS RevenuePerCustomer,
     ROUND((SUM(DailyRev_MarApr) / SUM(DailyRev_JanFeb) - 1) * 100, 2) AS GrowthPct,
     GROUP_CONCAT(CityName ORDER BY NetRevenue DESC SEPARATOR ', ')   AS Cities
-FROM g
+FROM city_strategy
 GROUP BY StrategicGroup
 ORDER BY NetRevenue DESC;
 
