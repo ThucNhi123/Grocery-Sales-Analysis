@@ -1,0 +1,4 @@
+﻿Rec,Recommendation,Type,Lever,Assumption,Impact_Low_USD_M,Impact_Base_USD_M,Impact_High_USD_M,Impact_Base_PctOfTotal,BaseRevenue_USD_M
+1,Upsell the Frequent - Low Spend segment,Revenue added,Average order value of the segment,AOV rises 5% / 10% / 15% at the same order frequency,24,49,73,1.1,485
+2,Customer acquisition in all cities,Revenue added,Number of customers,"Customer base grows 5% / 10% / 15% at current revenue per customer (city revenue follows customer count, r = 0.84)",217,433,650,10.0,4332
+3,"Review pricing of ABC class C (lowest-revenue) products, A/B test first",Revenue added,List price of ABC class C products,"Price +5% / +10% / +15% with units unchanged. Untested: each product has a single price, so price elasticity cannot be measured.",10,20,30,0.5,199

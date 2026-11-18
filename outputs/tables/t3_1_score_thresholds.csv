@@ -1,0 +1,9 @@
+﻿Metric,Score,MinValue,MaxValue,NumCustomers
+Frequency,1,36.0,63.0,24690
+Frequency,2,63.0,68.0,24690
+Frequency,3,68.0,74.0,24690
+Frequency,4,74.0,103.0,24689
+Monetary,1,1971.23,22298.28,24690
+Monetary,2,22300.07,42970.18,24690
+Monetary,3,42970.79,63836.83,24690
+Monetary,4,63837.46,130324.16,24689

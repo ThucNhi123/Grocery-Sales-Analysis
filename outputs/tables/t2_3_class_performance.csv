@@ -1,0 +1,4 @@
+﻿Class,NumProducts,PctProducts,TotalUnits,PctUnits,NetRevenue,PctRevenue,AvgListPrice,NetRevenuePerUnit,UnitsPerProduct,RevenuePerProduct,EffDiscountPct,RevenueEfficiencyIndex
+High,143,31.64,25618782.0,31.66,1347516979.3,33.78,54.21,52.6,179152.0,9423195.66,2.99,106.8
+Low,153,33.85,27385135.0,33.84,1340343713.05,33.6,50.42,48.94,178988.0,8760416.43,3.0,99.3
+Medium,156,34.51,27919791.0,34.5,1301548702.11,32.63,48.05,46.62,178973.0,8343260.91,3.0,94.5

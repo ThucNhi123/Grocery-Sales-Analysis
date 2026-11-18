@@ -1,0 +1,2 @@
+﻿NumCityMarkets,NumCountries,TotalNetRevenue,AvgRevenuePerCity,HHI_Index,Top5CitiesSharePct,Top10CitiesSharePct,CitiesFor50PctRevenue,CitiesFor80PctRevenue,CV_RevenueAcrossCities_Pct,CV_RevenuePerCustomer_Pct,Corr_Customers_vs_Revenue,SystemGrowthPct_MarApr_vs_JanFeb,NumCitiesGrowing,NumCitiesDeclining,CitiesWithSalesOffice
+96,1,4332445649.53,45129642.18,104.3,5.55,10.98,47,76,3.06,1.67,0.8409,0.15,52.0,44.0,18.0

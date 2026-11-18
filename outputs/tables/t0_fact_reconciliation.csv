@@ -1,0 +1,2 @@
+﻿RawSalesRows,FactRows,DroppedRows,RowsWithNullDate,PctNullDate,DistinctTransactions,FirstSalesDate,LastSalesDate,Raw_TotalPrice_Sum,Computed_NetRevenue
+6758125,6758125,0,67526.0,1.0,6758125,2018-01-01 00:00:04,2018-05-09 23:59:59,0.0,4332445649.53

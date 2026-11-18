@@ -1,0 +1,8 @@
+﻿WeekdayNo,WeekdayName,NumDays,AvgDailyNetRevenue,PctVsOverallAvg
+1,Monday,19,33245431.97,-0.01
+2,Tuesday,19,33213852.75,-0.11
+3,Wednesday,19,33257172.89,0.02
+4,Thursday,18,33219830.55,-0.09
+5,Friday,18,33295868.01,0.14
+6,Saturday,18,33250067.71,0.0
+7,Sunday,18,33269185.72,0.06

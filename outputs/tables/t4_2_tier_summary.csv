@@ -1,0 +1,4 @@
+﻿PerformanceTier,NumEmployees,NetRevenue,PctRevenue,AvgRevenuePerEmployee,AvgInvoicesPerEmployee,AOV,EmployeeIDs
+Top Performer,5,947127355.76,21.86,189425471.15,294106.0,644.07,"21,4,20,13,5"
+Meets Expectation,13,2449002117.17,56.53,188384778.24,293885.0,641.01,"14,8,7,6,22,19,18,12,15,9,23,2,16"
+Underperformer,5,936316176.6,21.61,187263235.32,293418.0,638.21,"11,1,10,3,17"

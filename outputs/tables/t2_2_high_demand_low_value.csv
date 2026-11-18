@@ -1,0 +1,23 @@
+﻿ProductID,ProductName,CategoryName,Class,TotalUnits,UnitsRank,NetRevenue,RevenueRank,NetRevenuePerUnit,UnitValueIndex
+67,Wine - Sogrape Mateus Rose,Beverages,Low,182090.0,14,667182.68,435,3.664,7.4
+365,"Wine - Red, Harrow Estates, Cab",Meat,Medium,181910.0,20,2226970.79,390,12.2422,24.8
+327,"Appetizer - Mini Egg Roll, Shrimp",Shell fish,Medium,181706.0,23,1259696.71,418,6.9326,14.1
+278,Apricots - Halves,Produce,Medium,181627.0,28,65718.52,451,0.3618,0.7
+370,Muffin - Carrot Individual Wrap,Dairy,Low,181543.0,34,3853016.12,353,21.2237,43.1
+321,"Potatoes - Instant, Mashed",Confections,Medium,181392.0,38,1831321.98,402,10.0959,20.5
+197,Mussels - Cultivated,Confections,Medium,181146.0,48,2282979.84,389,12.603,25.6
+62,Pears - Bosc,Confections,Medium,180918.0,58,3425837.76,363,18.9359,38.4
+75,Chef Hat 20cm,Grain,High,180823.0,61,733460.84,434,4.0562,8.2
+191,"Hickory Smoke, Liquid",Snails,High,180820.0,62,1803236.13,403,9.9725,20.2
+222,"Sole - Dover, Whole, Fresh",Cereals,High,180581.0,73,119914.67,449,0.664,1.3
+356,Dc - Frozen Momji,Seafood,High,180551.0,75,3001868.02,375,16.6262,33.7
+415,Mussels - Frozen,Snails,High,180532.0,77,1403515.09,413,7.7743,15.8
+368,Flour - Teff,Dairy,Low,180482.0,83,3201677.68,367,17.7396,36.0
+120,Water - Spring Water 500ml,Shell fish,Medium,180395.0,90,478290.54,442,2.6514,5.4
+270,Cheese Cloth No 100,Seafood,Medium,180393.0,91,773695.55,433,4.2889,8.7
+157,"Juice - Cranberry, 341 Ml",Produce,Medium,180353.0,93,2469445.72,383,13.6923,27.8
+334,Ecolab - Lime - A - Way 4/4 L,Meat,High,180230.0,102,3775404.77,354,20.9477,42.5
+322,Onions - Vidalia,Shell fish,Medium,180165.0,106,4592219.27,339,25.489,51.7
+261,Chinese Foods - Chicken,Poultry,High,180165.0,106,3861395.88,351,21.4326,43.5
+352,"Beef - Tenderlion, Center Cut",Dairy,Low,180158.0,108,4309921.15,343,23.923,48.5
+106,Pickerel - Fillets,Meat,High,180129.0,112,3276441.65,365,18.1894,36.9

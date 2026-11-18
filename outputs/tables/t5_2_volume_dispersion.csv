@@ -1,0 +1,2 @@
+﻿NumCities,TotalUnits,MeanUnitsPerCity,MedianUnitsPerCity,TopCity,TopCityUnits,BottomCity,BottomCityUnits,MaxMinGap,MaxMinRatio,StdDevUnits,CV_Pct,Top10CitiesPctUnits,Bottom10CitiesPctUnits
+96,87882708.0,915445.0,913860.0,Tucson,993698.0,Omaha,855896.0,137802.0,1.161,27949.0,3.05,10.99,9.91

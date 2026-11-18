@@ -1,0 +1,11 @@
+﻿GroupName,GroupRank,ProductID,ProductName,CategoryName,Class,ListPrice,TotalUnits,NetRevenue,SharePct,IndexVsAvgProduct
+Bottom 5 products,1,165,Bread Crumbs - Japanese Style,Seafood,Low,0.04,179117.0,7806.96,0.0,0.1
+Bottom 5 products,2,278,Apricots - Halves,Produce,Medium,0.37,181627.0,65718.52,0.002,0.7
+Bottom 5 products,3,405,Pastry - Raisin Muffin - Mini,Produce,Medium,0.43,179682.0,74627.15,0.002,0.8
+Bottom 5 products,4,222,"Sole - Dover, Whole, Fresh",Cereals,High,0.68,180581.0,119914.67,0.003,1.4
+Bottom 5 products,5,283,Bread Fig And Almond,Dairy,Low,1.19,178092.0,205312.41,0.005,2.3
+Top 5 best sellers,1,345,Bread - Calabrese Baguette,Dairy,Medium,98.6,181701.0,17380553.97,0.436,196.9
+Top 5 best sellers,2,98,Shrimp - 31/40,Cereals,High,99.88,178234.0,17266027.04,0.433,195.6
+Top 5 best sellers,3,392,Puree - Passion Fruit,Beverages,High,98.83,179876.0,17260062.71,0.433,195.6
+Top 5 best sellers,4,104,Tia Maria,Beverages,High,98.25,180385.0,17175007.86,0.431,194.6
+Top 5 best sellers,5,149,Zucchini - Yellow,Snails,High,98.46,178768.0,17078285.86,0.428,193.5

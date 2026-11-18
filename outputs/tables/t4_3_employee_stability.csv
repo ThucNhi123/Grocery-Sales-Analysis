@@ -1,0 +1,24 @@
+﻿SalesPersonID,EmployeeName,MeanDailyRevenue,MinMonthDailyRevenue,MaxMonthDailyRevenue,CV_Pct,TrendSlopePctPerMonth,Growth_JanToApr_Pct,BestMonthlyRank,WorstMonthlyRank,RankRange,StabilityGroup,TrendDirection
+6,Holly E. Collins,1447294.81,1445735.56,1450113.53,0.12,0.05,0.07,9,12,3,High,Flat
+4,Darnell O. Nielsen,1450590.41,1446893.69,1455993.69,0.25,0.15,0.3,4,11,7,High,Flat
+7,Chadwick P. Cook,1449091.92,1442501.51,1452162.09,0.27,0.19,0.59,5,15,10,High,Flat
+16,Chadwick U. Walton,1440739.23,1433795.89,1444831.37,0.29,0.19,0.59,12,21,9,High,Flat
+13,Katina Y. Marks,1452361.78,1445123.82,1456339.58,0.3,0.03,-0.16,3,10,7,High,Flat
+2,Christine W. Palmer,1441735.87,1435247.27,1447927.3,0.34,0.26,0.65,13,20,7,High,Flat
+14,Wendi G. Buckley,1449246.09,1446069.78,1458489.25,0.37,0.26,0.86,2,16,14,High,Flat
+12,Lindsay M. Chen,1448345.98,1440391.07,1455524.15,0.37,-0.12,-0.55,5,17,12,High,Flat
+10,Jean P. Vang,1437439.99,1429287.3,1443383.25,0.37,-0.19,-0.31,11,22,11,Medium,Flat
+11,Sonya E. Dickson,1438982.06,1432777.58,1446089.61,0.38,-0.06,-0.25,13,22,9,Medium,Flat
+20,Shelby P. Riddle,1453485.07,1446422.6,1461352.0,0.39,-0.34,-1.02,1,12,11,Medium,Flat
+19,Bernard L. Moody,1445880.69,1436444.4,1451955.89,0.4,0.2,0.79,2,18,16,Medium,Flat
+18,Warren C. Bartlett,1446172.64,1436210.41,1454259.41,0.45,0.19,0.42,4,20,16,Medium,Flat
+8,Julie E. Dyer,1450472.52,1438886.96,1455178.01,0.46,0.1,0.03,3,16,13,Medium,Flat
+22,Tonia O. Mc Millan,1448536.67,1437368.09,1457727.44,0.51,-0.45,-1.4,3,19,16,Medium,Flat
+3,Pablo Y. Cline,1439367.12,1428445.33,1449060.62,0.52,-0.2,-0.46,7,23,16,Medium,Flat
+1,Nicole T. Fuller,1438689.59,1430301.81,1449958.72,0.55,0.01,-0.15,12,22,10,Volatile,Flat
+17,Seth D. Franco,1430687.22,1422323.41,1440700.98,0.56,0.05,0.06,19,23,4,Volatile,Flat
+15,Kari D. Finley,1441663.0,1431773.63,1454266.79,0.57,0.07,-0.27,6,23,17,Volatile,Flat
+5,Desiree L. Stuart,1451389.21,1439042.87,1462290.63,0.58,0.08,-0.26,1,15,14,Volatile,Flat
+23,Janet K. Flowers,1442491.0,1432474.28,1451516.74,0.58,0.16,0.99,3,21,18,Volatile,Flat
+9,Daphne X. King,1441600.83,1427860.37,1452438.69,0.68,-0.33,-1.45,8,22,14,Volatile,Flat
+21,Devon D. Brewer,1457360.91,1434895.56,1471350.79,0.94,0.31,0.48,1,21,20,Volatile,Flat

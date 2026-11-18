@@ -1,0 +1,24 @@
+﻿CompositeRank,SalesPersonID,EmployeeName,BaseCity,TenureYears,NetRevenue,NumInvoices,AvgInvoiceValue,RevenuePctVsTeamAvg,Z_Revenue,Z_Invoices,Z_AOV,CompositeScore,PerformanceTier
+1,21,Devon D. Brewer,Baltimore,2.3,190042744.17,294983,644.25,0.89,2.01,2.15,1.29,1.91,Top Performer
+2,4,Darnell O. Nielsen,Lubbock,4.2,189135962.51,294744,641.7,0.41,0.92,1.7,0.25,1.02,Top Performer
+3,20,Shelby P. Riddle,Indianapolis,5.1,189413136.56,293562,645.22,0.56,1.26,-0.5,1.68,0.81,Top Performer
+4,13,Katina Y. Marks,Anchorage,6.4,189312927.5,293530,644.95,0.5,1.13,-0.56,1.57,0.71,Top Performer
+5,5,Desiree L. Stuart,Anaheim,3.5,189222585.03,293711,644.25,0.45,1.03,-0.22,1.29,0.7,Top Performer
+6,14,Wendi G. Buckley,Jackson,1.8,189062196.78,294035,642.99,0.37,0.83,0.38,0.78,0.69,Meets Expectation
+7,8,Julie E. Dyer,Little Rock,3.6,188862586.95,294449,641.41,0.26,0.59,1.15,0.14,0.67,Meets Expectation
+8,7,Chadwick P. Cook,Lubbock,1.8,188795030.83,293967,642.23,0.23,0.51,0.25,0.47,0.43,Meets Expectation
+9,6,Holly E. Collins,Baltimore,4.9,188784837.26,293973,642.18,0.22,0.5,0.26,0.45,0.42,Meets Expectation
+10,22,Tonia O. Mc Millan,Las Vegas,2.5,188781068.59,293224,643.81,0.22,0.5,-1.13,1.11,0.13,Meets Expectation
+11,19,Bernard L. Moody,Albuquerque,4.5,188458079.77,293875,641.29,0.05,0.11,0.08,0.09,0.1,Meets Expectation
+12,18,Warren C. Bartlett,Columbus,8.2,188218252.7,294419,639.29,-0.08,-0.18,1.1,-0.72,0.09,Meets Expectation
+13,12,Lindsay M. Chen,Columbus,6.5,188631444.66,293164,643.43,0.14,0.32,-1.24,0.96,-0.02,Meets Expectation
+14,15,Kari D. Finley,Hialeah,3.8,187931878.09,294096,639.02,-0.23,-0.52,0.49,-0.83,-0.28,Meets Expectation
+15,9,Daphne X. King,Lubbock,5.1,187854115.73,294180,638.57,-0.27,-0.62,0.65,-1.01,-0.32,Meets Expectation
+16,23,Janet K. Flowers,Riverside,8.0,188001124.23,293703,640.11,-0.19,-0.44,-0.24,-0.39,-0.37,Meets Expectation
+17,2,Christine W. Palmer,Fremont,7.0,187841675.33,293737,639.49,-0.28,-0.63,-0.18,-0.64,-0.5,Meets Expectation
+18,16,Chadwick U. Walton,Tucson,1.2,187779826.23,293685,639.39,-0.31,-0.7,-0.27,-0.68,-0.57,Meets Expectation
+19,11,Sonya E. Dickson,Tacoma,1.7,187552432.48,294110,637.69,-0.43,-0.98,0.52,-1.37,-0.61,Underperformer
+20,1,Nicole T. Fuller,New Orleans,6.9,187649473.68,293394,639.58,-0.38,-0.86,-0.82,-0.6,-0.8,Underperformer
+21,10,Jean P. Vang,Atlanta,5.8,187264397.86,293888,637.2,-0.59,-1.32,0.11,-1.57,-0.94,Underperformer
+22,3,Pablo Y. Cline,Rochester,6.1,187529449.99,293175,639.65,-0.44,-1.01,-1.22,-0.58,-0.99,Underperformer
+23,17,Seth D. Franco,New Orleans,7.8,186320422.59,292521,636.95,-1.09,-2.46,-2.44,-1.67,-2.3,Underperformer

@@ -1,0 +1,3 @@
+﻿Basis,CustomerType,NumCustomers,PctCustomers,NetRevenue,PctRevenue
+By invoice (TransactionNumber),Repeat Customer,98759,100.0,4332445649.53,100.0
+By distinct shopping days,Repeat Customer,98759,100.0,4332445649.53,100.0
