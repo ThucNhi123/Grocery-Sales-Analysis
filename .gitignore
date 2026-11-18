@@ -1,0 +1,27 @@
+# Secrets - never commit real database credentials
+.env
+python/.env
+
+# Raw data is too large for GitHub (sales.csv is ~517 MB); see README for the source
+data/raw/*.csv
+
+# Large row-level export (8 MB); regenerate with run_analysis.py
+outputs/tables/t3_1_customer_segments_detail.csv
+
+# Python / editor clutter
+__pycache__/
+*.pyc
+python/tempCodeRunnerFile.py
+.DS_Store
+.vscode/
+.ipynb_checkpoints/
+
+# Old drafts
+SQL/_drafts_backup/
+
+# Personal notes (Vietnamese build guide)
+dashboard/BUILD_GUIDE_vi.md
+
+# Tableau local files (publish to Tableau Public instead)
+*.twbx.bak
+_backup_before_fixes/
