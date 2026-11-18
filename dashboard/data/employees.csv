@@ -1,0 +1,24 @@
+CompositeRank,EmployeeID,EmployeeName,BaseCity,TenureYears,NetRevenue,NumInvoices,AvgInvoiceValue,PctVsTeamAvg,CompositeScore,PerformanceTier,CV_Pct,StabilityGroup,TrendDirection,BestMonthlyRank,WorstMonthlyRank
+1,21,Devon D. Brewer,Baltimore,2.3,190042744.17,294983,644.25,0.89,1.91,Top Performer,0.94,Volatile,Flat,1,21
+2,4,Darnell O. Nielsen,Lubbock,4.2,189135962.51,294744,641.7,0.41,1.02,Top Performer,0.25,High,Flat,4,11
+3,20,Shelby P. Riddle,Indianapolis,5.1,189413136.56,293562,645.22,0.56,0.81,Top Performer,0.39,Medium,Flat,1,12
+4,13,Katina Y. Marks,Anchorage,6.4,189312927.5,293530,644.95,0.5,0.71,Top Performer,0.3,High,Flat,3,10
+5,5,Desiree L. Stuart,Anaheim,3.5,189222585.03,293711,644.25,0.45,0.7,Top Performer,0.58,Volatile,Flat,1,15
+6,14,Wendi G. Buckley,Jackson,1.8,189062196.78,294035,642.99,0.37,0.69,Meets Expectation,0.37,High,Flat,2,16
+7,8,Julie E. Dyer,Little Rock,3.6,188862586.95,294449,641.41,0.26,0.67,Meets Expectation,0.46,Medium,Flat,3,16
+8,7,Chadwick P. Cook,Lubbock,1.8,188795030.83,293967,642.23,0.23,0.43,Meets Expectation,0.27,High,Flat,5,15
+9,6,Holly E. Collins,Baltimore,4.9,188784837.26,293973,642.18,0.22,0.42,Meets Expectation,0.12,High,Flat,9,12
+10,22,Tonia O. Mc Millan,Las Vegas,2.5,188781068.59,293224,643.81,0.22,0.13,Meets Expectation,0.51,Medium,Flat,3,19
+11,19,Bernard L. Moody,Albuquerque,4.5,188458079.77,293875,641.29,0.05,0.1,Meets Expectation,0.4,Medium,Flat,2,18
+12,18,Warren C. Bartlett,Columbus,8.2,188218252.7,294419,639.29,-0.08,0.09,Meets Expectation,0.45,Medium,Flat,4,20
+13,12,Lindsay M. Chen,Columbus,6.5,188631444.66,293164,643.43,0.14,-0.02,Meets Expectation,0.37,High,Flat,5,17
+14,15,Kari D. Finley,Hialeah,3.8,187931878.09,294096,639.02,-0.23,-0.28,Meets Expectation,0.57,Volatile,Flat,6,23
+15,9,Daphne X. King,Lubbock,5.1,187854115.73,294180,638.57,-0.27,-0.32,Meets Expectation,0.68,Volatile,Flat,8,22
+16,23,Janet K. Flowers,Riverside,8.0,188001124.23,293703,640.11,-0.19,-0.37,Meets Expectation,0.58,Volatile,Flat,3,21
+17,2,Christine W. Palmer,Fremont,7.0,187841675.33,293737,639.49,-0.28,-0.5,Meets Expectation,0.34,High,Flat,13,20
+18,16,Chadwick U. Walton,Tucson,1.2,187779826.23,293685,639.39,-0.31,-0.57,Meets Expectation,0.29,High,Flat,12,21
+19,11,Sonya E. Dickson,Tacoma,1.7,187552432.48,294110,637.69,-0.43,-0.61,Underperformer,0.38,Medium,Flat,13,22
+20,1,Nicole T. Fuller,New Orleans,6.9,187649473.68,293394,639.58,-0.38,-0.8,Underperformer,0.55,Volatile,Flat,12,22
+21,10,Jean P. Vang,Atlanta,5.8,187264397.86,293888,637.2,-0.59,-0.94,Underperformer,0.37,Medium,Flat,11,22
+22,3,Pablo Y. Cline,Rochester,6.1,187529449.99,293175,639.65,-0.44,-0.99,Underperformer,0.52,Medium,Flat,7,23
+23,17,Seth D. Franco,New Orleans,7.8,186320422.59,292521,636.95,-1.09,-2.3,Underperformer,0.56,Volatile,Flat,19,23
