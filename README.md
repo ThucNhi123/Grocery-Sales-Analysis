@@ -133,6 +133,3 @@ dashboard/data/      clean extracts for Tableau
 - Every order contains one product line, so basket (market-basket) analysis is not possible.
 - The data appears simulated (see Data validation). The method transfers to real data, but the specific numbers should not be read as real business results.
 
-## Author
-
-Thục Nhi · _[LinkedIn]_ · _[Email]_
