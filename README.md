@@ -1,6 +1,6 @@
 # Grocery Sales Analysis (2018)
 
-End-to-end sales analysis of **6.76 million transactions** from a US grocery retailer (Jan – May 2018), built with **MySQL** and **Python**. It answers five business questions about revenue, products, customers, sales staff and markets, and turns the answers into sized recommendations.
+End-to-end sales analysis of **6.76 million transactions** from a US grocery retailer (Jan – May 2018), built with **MySQL** and **Python**. It answers five business questions about revenue, products, customers, sales staff and markets, and turns the answers into evidence-based recommendations.
 
 **Highlights**
 - 44 analytical SQL queries (CTEs, window functions, NTILE, ROLLUP, z-scores) run by an automated Python pipeline that exports every result to CSV.
@@ -105,8 +105,10 @@ The first index takes 7.5 s to build and pays for itself on the first run. Full 
 ```
 SQL/                 00_* schema, fact table, validation · 01–05 one file per business question
 python/              00_import_data · run_analysis · make_charts · impact_scenarios · benchmark_sql · prepare_dashboard_data
+outputs/             full report (PDF + Word)
 outputs/tables/      one CSV per query
 outputs/charts/      14 PNG charts
+dashboard/           Tableau workbook (Grocery_Sales_Dashboard.twb)
 dashboard/data/      clean extracts for Tableau
 ```
 
@@ -118,7 +120,7 @@ dashboard/data/      clean extracts for Tableau
    ```bash
    pip install -r requirements.txt
    mysql -u root -p < SQL/00_create_schema.sql
-   python python/00_import_data.py
+   python python/00_import_data.py            # add --reset to empty the tables and import again
    python python/run_analysis.py --build      # fact table + all analyses (takes several minutes)
    python python/make_charts.py
    python python/impact_scenarios.py

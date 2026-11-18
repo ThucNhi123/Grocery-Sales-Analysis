@@ -30,3 +30,6 @@ _backup_before_fixes/
 *.twbr
 .~*
 ~$*
+
+# Word lock files
+~$*
